@@ -1,13 +1,14 @@
 name: Build and Deploy
 on:
-  pull_request:
+  # pull_request:
+  push:
     branches:
       - main
-    types: [closed]
+    # types: [closed]
 
 jobs:
   build-and-deploy: # job id
-    if: github.event.pull_request.merged == true # filter -> merged on main
+    # if: github.event.pull_request.merged == true # filter -> merged on main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
